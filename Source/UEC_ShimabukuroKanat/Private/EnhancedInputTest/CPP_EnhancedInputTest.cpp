@@ -3,11 +3,11 @@
 
 #include "EnhancedInputTest/CPP_EnhancedInputTest.h"
 
-#include "Kismet/KismetSystemLibrary.h" // 追加
-#include "Kismet/GameplayStatics.h" // 追加
-#include "Components/InputComponent.h" // 追加
-#include "EnhancedInputComponent.h" // 追加
-#include "EnhancedInputSubsystems.h" // 追加
+#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
+#include "Components/InputComponent.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
 
 class UInputMappingContext;
 
@@ -17,11 +17,11 @@ ACPP_EnhancedInputTest::ACPP_EnhancedInputTest()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	//PrimaryActorTick.bCanEverTick = true;
 
-	// Input Actionを読込
+	// Input Actionを読み込み
 	ActionInput = LoadObject<UInputAction>(NULL, TEXT("/Game/EnhancedInput/Input/Actions/IA_Action"), NULL, LOAD_None, NULL);
 	AxisInput = LoadObject<UInputAction>(NULL, TEXT("/Game/EnhancedInput/Input/Actions/IA_Axis"), NULL, LOAD_None, NULL);
 
-	// Input Mapping Contextを読込
+	// Input Mapping Contextを読み込み
 	DefaultMappingContext = LoadObject<UInputMappingContext>(NULL, TEXT("/Game/EnhancedInput/Input/IMC_Default"), NULL, LOAD_None, NULL);
 }
 
@@ -43,7 +43,7 @@ void ACPP_EnhancedInputTest::BeginPlay()
 
 void ACPP_EnhancedInputTest::SetupInput()
 {
-	// PlayerControllerを取得する
+	// PlayerControllerを取得
 	APlayerController* controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 
 	// 入力を有効にする

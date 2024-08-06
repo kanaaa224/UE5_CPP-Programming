@@ -5,9 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 
-#include "InputMappingContext.h" // 追加
-#include "InputAction.h" // 追加
-#include "InputActionValue.h" // 追加
+#include "InputMappingContext.h"
+#include "InputAction.h"
+#include "InputActionValue.h"
 
 #include "CPP_EnhancedInputTest.generated.h"
 
